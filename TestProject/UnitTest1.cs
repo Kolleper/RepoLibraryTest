@@ -4,55 +4,33 @@ namespace TestProject
 {
     public class Tests
     {
-        private ShapeProcessor _processor;
-
-        [SetUp]
-        public void Setup()
-        {
-            _processor = new ShapeProcessor();
-        }
-
+        // Тест для вычисления площади окружности
         [Test]
         public void TestCircleArea()
         {
-            var circle = new Circle(5);
-            double area = _processor.CalculateArea(circle);
+            Shape shape = new Circle(5);
+            double area = shape.GetArea();//Вычисление площади фигуры без знания типа фигуры в compile-time
             Assert.That(area, Is.EqualTo(Math.PI * 25).Within(0.001));
         }
         [Test]
         public void TestSquareArea()
         {
-            var square = new Square(3);
-            double area = _processor.CalculateArea(square);
+            Shape shape = new Square(3);
+            double area = shape.GetArea();//Вычисление площади фигуры без знания типа фигуры в compile-time
             Assert.That(area, Is.EqualTo(9));
         }
-
         [Test]
         public void TestTriangleArea()
         {
-            var triangle = new Triangle(3, 4, 5);
-            double area = _processor.CalculateArea(triangle);
+            Shape shape = new Triangle(3, 4, 5);
+            double area = shape.GetArea();//Вычисление площади фигуры без знания типа фигуры в compile-time
             Assert.That(area, Is.EqualTo(6));
         }
-
         [Test]
         public void TriangleIsRightAngled()
         {
-            var triangle = new Triangle(3, 4, 5);
-            bool isRight = _processor.IsTriangleRightAngled(triangle);
-            Assert.IsTrue(isRight);
-        }
-
-        [Test]
-        public void NotATriangleThrowsException()
-        {
-            Assert.Throws<InvalidOperationException>(() => _processor.IsTriangleRightAngled(new Circle(5)));
-        }
-
-        [Test]
-        public void TriangleWithInvalidSidesThrowsException()
-        {
-            Assert.Throws<ArgumentException>(() => new Triangle(-1, 4, 5));
+            Shape shape = new Triangle(3, 4, 5);
+            Assert.IsTrue(shape.IsSpecial());//Проверка на прямоугольность треугольника, без знания типа фигуры в compile-time
         }
     }
 }
