@@ -12,6 +12,7 @@
 5) Проверку на то, является ли треугольник прямоугольным.
 # Ответы на вопросы в вакансии
 Вопрос №1: Был опыт frontend и небольшой backend, репозиторий отсутствует для примера.
+
 Вопрос №2: <https://github.com/Kolleper/RepoLibraryTest>
 
 Вопрос №3: 
@@ -22,6 +23,7 @@ LEFT JOIN ProductCategories pc ON p.ProductID = pc.ProductID
 LEFT JOIN Categories c ON pc.CategoryID = c.CategoryID;
 ```
 ![image](https://github.com/Kolleper/RepoLibraryTest/assets/61471977/446149f6-8004-4ca9-b024-5d6e791f28b4)
+
 Вопрос №4: Готов выйти на фуллтайм удаленно в случае успешного завершения стажировки.
 
 
