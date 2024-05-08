@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LibraryTest
+{
+    public class Square : Shape
+    {
+        private double Side;
+
+        public Square(double side)
+        {
+            Side = side;
+        }
+
+        public override double GetArea()
+        {
+            return Side * Side;
+        }
+    }
+}
