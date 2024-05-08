@@ -13,6 +13,7 @@
 # Ответы на вопросы в вакансии
 Вопрос №1: Был опыт frontend и небольшой backend, репозиторий отсутствует для примера.
 Вопрос №2: <https://github.com/Kolleper/RepoLibraryTest>
+
 Вопрос №3: 
 ```sql 
 SELECT p.ProductName, ISNULL(c.CategoryName, 'нет категории') AS CategoryName
