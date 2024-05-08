@@ -7,22 +7,20 @@ using System.Threading.Tasks;
 
 namespace LibraryTest
 {
-    public class Circle : IShape
+    public class Circle : Shape
     {
-        private double Radius;
+        public double Radius { get; private set; }
 
-        internal Circle(double radius)
+        public Circle(double radius)
         {
+            if (radius <= 0)
+                throw new ArgumentException("Радиус должен быть больше 0.");
             Radius = radius;
         }
 
-        public double GetArea()
+        public override double GetArea()
         {
             return Math.PI * Radius * Radius;
-        }
-        public static Circle CreateCircle(double radius)
-        {
-            return new Circle(radius);
         }
     }
 }

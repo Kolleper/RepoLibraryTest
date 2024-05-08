@@ -6,33 +6,33 @@ using System.Threading.Tasks;
 
 namespace LibraryTest
 {
-    public class Triangle : IShape
+    public class Triangle : Shape
     {
-        public double _side1;
-        public double _side2;
-        public double _side3;
+        public double _Side1 { get; private set; }
+        public double _Side2 { get; private set; }
+        public double _Side3 { get; private set; }
 
-        internal Triangle(double side1, double side2, double side3)
+        public Triangle(double side1, double side2, double side3)
         {
-            _side1 = side1;
-            _side2 = side2;
-            _side3 = side3;
+            if (side1 <= 0 || side2 <= 0 || side3 <= 0)
+                throw new ArgumentException("Стороны должны быть больше нуля.");
+            if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1)
+                throw new ArgumentException("Сумма длин любых двух сторон должна быть больше длины третьей стороны.");
+
+            _Side1 = side1;
+            _Side2 = side2;
+            _Side3 = side3;
         }
-        public double GetArea()
+        public override double GetArea()
         {
-            // Implement the area calculation for a triangle using Heron's formula
-            double s = (_side1 + _side2 + _side3) / 2;
-            return Math.Sqrt(s * (s - _side1) * (s - _side2) * (s - _side3));
+            double s = (_Side1 + _Side2 + _Side3) / 2;
+            return Math.Sqrt(s * (s - _Side1) * (s - _Side2) * (s - _Side3));
         }
         public bool IsRightAngled()
         {
-            var sides = new List<double> { _side1, _side2, _side3 };
+            var sides = new List<double> { _Side1, _Side2, _Side3 };
             sides.Sort();
-            return Math.Abs(sides[2] * sides[2] - (sides[0] * sides[0] + sides[1] * sides[1])) < 0.001;
-        }
-        public static Triangle CreateTriangle(double side1, double side2, double side3)
-        {
-            return new Triangle(side1, side2, side3);
+            return Math.Abs(sides[2] * sides[2] - (sides[0] * sides[0] + sides[1] * sides[1])) < 1E-10;
         }
     }
 }

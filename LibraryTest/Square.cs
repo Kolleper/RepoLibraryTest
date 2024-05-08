@@ -6,22 +6,18 @@ using System.Threading.Tasks;
 
 namespace LibraryTest
 {
-    public class Square : IShape
+    public class Square : Shape
     {
         private double Side;
 
-        internal Square(double side)
+        public Square(double side)
         {
             Side = side;
         }
 
-        public double GetArea()
+        public override double GetArea()
         {
             return Side * Side;
-        }
-        public static Square CreateSquare(double side) 
-        {
-            return new Square(side);
         }
     }
 }
