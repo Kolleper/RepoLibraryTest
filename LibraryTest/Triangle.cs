@@ -28,7 +28,7 @@ namespace LibraryTest
             double s = (_Side1 + _Side2 + _Side3) / 2;
             return Math.Sqrt(s * (s - _Side1) * (s - _Side2) * (s - _Side3));
         }
-        public bool IsRightAngled()
+        public override bool IsSpecial()
         {
             var sides = new List<double> { _Side1, _Side2, _Side3 };
             sides.Sort();
