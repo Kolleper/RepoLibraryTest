@@ -6,7 +6,7 @@
 
 ## Ключевые особенности
 1) Юнит-тесты;
-   ![ViewOfTest](https://github.com/Kolleper/RepoLibraryTest/assets/61471977/cdc3a856-748b-424c-8d41-52fca797b57d)
+   ![video]https://github.com/Kolleper/RepoLibraryTest/assets/61471977/02ecd357-b0c0-4293-b69d-e7df409c804e
 3) Легкость добавления других фигур;
 4) Вычисление площади фигуры без знания типа фигуры в compile-time;
 5) Проверку на то, является ли треугольник прямоугольным.
