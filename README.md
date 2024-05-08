@@ -1,4 +1,4 @@
-![image](https://github.com/Kolleper/RepoLibraryTest/assets/61471977/446149f6-8004-4ca9-b024-5d6e791f28b4)## Библиотека для поставки внешним клиентам.
+## Библиотека для поставки внешним клиентам.
 # Тестовое задание для отклика на вакансию Cтажер-разработчик C# (back-end)
 
 ## Описание
@@ -6,9 +6,10 @@
 
 ## Ключевые особенности
 1) Юнит-тесты;
-2) Легкость добавления других фигур;
-3) Вычисление площади фигуры без знания типа фигуры в compile-time;
-4) Проверку на то, является ли треугольник прямоугольным.
+   ![ViewOfTest](https://github.com/Kolleper/RepoLibraryTest/assets/61471977/cdc3a856-748b-424c-8d41-52fca797b57d)
+3) Легкость добавления других фигур;
+4) Вычисление площади фигуры без знания типа фигуры в compile-time;
+5) Проверку на то, является ли треугольник прямоугольным.
 # Ответы на вопросы в вакансии
 Вопрос №1: Был опыт frontend и небольшой backend, репозиторий отсутствует для примера.
 Вопрос №2: <https://github.com/Kolleper/RepoLibraryTest>
@@ -19,6 +20,7 @@ FROM Products p
 LEFT JOIN ProductCategories pc ON p.ProductID = pc.ProductID
 LEFT JOIN Categories c ON pc.CategoryID = c.CategoryID;
 ```
+![image](https://github.com/Kolleper/RepoLibraryTest/assets/61471977/446149f6-8004-4ca9-b024-5d6e791f28b4)
 Вопрос №4: Готов выйти на фуллтайм удаленно в случае успешного завершения стажировки.
 
 
