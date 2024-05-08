@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LibraryTest
-build_property.ProjectDir = C:\Users\lovch\source\repos\LibraryTest\LibraryTest\
+build_property.ProjectDir = C:\Users\lovch\source\repos\RepoLibraryTest\LibraryTest\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
