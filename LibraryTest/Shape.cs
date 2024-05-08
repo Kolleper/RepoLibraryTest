@@ -9,10 +9,6 @@ namespace LibraryTest
     public abstract class Shape
     {
         public abstract double GetArea();
-        public double CalculateArea(Shape shape)
-        {
-            return shape.GetArea();
-        }
     }
 
 }
