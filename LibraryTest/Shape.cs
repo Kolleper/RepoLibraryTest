@@ -8,7 +8,7 @@ namespace LibraryTest
 {
     public abstract class Shape
     {
-        public abstract double GetArea();
+        public abstract double GetArea();// абстрактный метод для вычисления площади
+        public virtual bool IsSpecial() => false; // виртуальный метод для проверки условия
     }
-
 }
